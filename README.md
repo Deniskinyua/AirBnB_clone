@@ -46,6 +46,6 @@
 - We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 
 ### System Design
-/../images/design.png
+![system design](images/design.png)
 
 
