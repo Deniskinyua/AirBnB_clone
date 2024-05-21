@@ -17,17 +17,12 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsNotNone(my_model.created_at)
         self.assertIsNotNone(my_model.updated_at)
 
-    def recc(self):
-        """
-        Recurring object
-        """
-        self.model = BaseModel()
-
     def test_id(self):
         """
         Test id
         """
-        self.assertIsInstance(self.model.id, str)
+        model = BaseModel()
+        self.assertIsInstance(model.id, str)
 
     def test_save(self):
         """
@@ -45,7 +40,7 @@ class TestBaseModel(unittest.TestCase):
         model = BaseModel()
         model_dict = model.to_dict
         message = "Object is not an instance of..."
-        # self.assertIsInstance(model_dict, dict, message)
+        self.assertIsInstance(model_dict, dict, message)
         self.assertEqual(model_dict()["__class__"], 'BaseModel')
         self.assertEqual(model_dict()['id'], model.id)
         self.assertEqual(model_dict()['created_at'], model.created_at.isoformat())
