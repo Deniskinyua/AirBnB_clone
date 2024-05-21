@@ -48,5 +48,6 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn(model.id, str(model))
         self.assertIn(str(model.__dict__), str(model))
 
+
 if __name__ == "__main__":
     unittest.main()
